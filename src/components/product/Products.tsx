@@ -1,34 +1,18 @@
-import { useLocation } from "react-router-dom";
-import { Product } from './Product';
+import { useLocation } from 'react-router-dom';
+import { IProduct, ProductProps } from './types.ts';
+import Product from './Product.tsx';
 
-export interface ProductsAttributes {
-  id: number;
-  title: string;
-  description?: string;
-  price: number;
-  discountPercentage?: number;
-  rating?: number;
-  stock?: number;
-  brand?: string;
-  category?: string;
-  thumbnail?: string;
-  images?: string[];
-}
-
-interface ProductsProps {
-  products: ProductsAttributes[];
-}
-export default function Products({ products }: ProductsProps) {
+export default function Products({ products, limit = 10 }: ProductProps) {
   const location = useLocation();
   const { fromCategory } = location.state;
-  const list = products.filter( item => item.category === fromCategory.category)
+  const list = products.filter(
+    (item) => item.category === fromCategory.category,
+  );
   return (
-    <section className='w-full px-4'>
-      <ul className='responsive-columns'>
-        {list.slice(0, 10).map((product) => {
-          return <Product product={product} key={product.id} />;
-        })}
-      </ul>
-    </section>
+    <ul className='responsive-columns justify-center'>
+      {list.slice(0, limit).map((product) => {
+        return <Product product={product} key={product.id} />;
+      })}
+    </ul>
   );
 }

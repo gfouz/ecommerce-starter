@@ -7,7 +7,7 @@
     "discountPercentage": 2.92,
     "rating": 4.92,
     "stock": 54,
-    "brand": "Golden",
+    "brand": false,
     "category": "ground",
     "thumbnail": "/images/biga.jpg"
   },
@@ -19,7 +19,7 @@
     "discountPercentage": 11.02,
     "rating": 4.57,
     "stock": 83,
-    "brand": "Apple",
+    "brand": false,
     "category": "ground",
     "thumbnail": "/images/buns.jpg"
   },
@@ -31,7 +31,7 @@
     "discountPercentage": 17.94,
     "rating": 4.44,
     "stock": 34,
-    "brand": "Apple",
+    "brand": false,
     "category": "ground",
     "thumbnail": "/images/blue-max.jpg"
   },
@@ -43,7 +43,7 @@
     "discountPercentage": 15.46,
     "rating": 4.09,
     "stock": 36,
-    "brand": "Samsung",
+    "brand": false,
     "category": "ground",
     "thumbnail": "/images/maxi.jpg"
   },
@@ -55,19 +55,19 @@
     "discountPercentage": 17.91,
     "rating": 4.3,
     "stock": 123,
-    "brand": "OPPO",
+    "brand": false,
     "category": "ground",
     "thumbnail": "/images/dellavie-special.jpg"
   },
   {
     "id": 5,
     "title": "Coffee Dellavie Original",
-    "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+    "description": "Huawei re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
     "price": 6.45,
     "discountPercentage": 10.58,
     "rating": 4.09,
     "stock": 32,
-    "brand": "Huawei",
+    "brand": false,
     "category": "ground",
     "thumbnail": "/images/dellavie-original.jpg"
   },
@@ -79,7 +79,7 @@
     "discountPercentage": 4.15,
     "rating": 4.25,
     "stock": 50,
-    "brand": "Samsung",
+    "brand": false,
     "category": "ground",
     "thumbnail": "/images/dellavie-exclusive.jpg"
   },
@@ -91,7 +91,7 @@
     "discountPercentage": 12.96,
     "rating": 4.69,
     "stock": 94,
-    "brand": "Apple",
+    "brand": false,
     "category": "ground",
     "thumbnail": "/images/mockup.jpg"
   },
@@ -103,7 +103,7 @@
     "discountPercentage": 10.23,
     "rating": 4.43,
     "stock": 68,
-    "brand": "Microsoft Surface",
+    "brand": false,
     "category": "ground",
     "thumbnail": "/images/strong-john.jpg"
   },
@@ -115,7 +115,7 @@
     "discountPercentage": 11.83,
     "rating": 4.54,
     "stock": 96,
-    "brand": "Infinix",
+    "brand": false,
     "category": "ground",
     "thumbnail": "/images/toucans.jpg"
   },
@@ -127,7 +127,7 @@
     "discountPercentage": 6.18,
     "rating": 4.43,
     "stock": 89,
-    "brand": "HP Pavilion",
+    "brand": false,
     "category": "soluble",
     "thumbnail": "/images/moccona.jpg"
   },
@@ -139,7 +139,7 @@
     "discountPercentage": 8.4,
     "rating": 4.26,
     "stock": 65,
-    "brand": "Impression of Acqua Di Gio",
+    "brand": false,
     "category": "soluble",
     "thumbnail": "/images/mellita.jpg"
   },
@@ -151,7 +151,7 @@
     "discountPercentage": 15.66,
     "rating": 4,
     "stock": 52,
-    "brand": "Royal_Mirage",
+    "brand": false,
     "category": "soluble",
     "thumbnail": "/images/jacobs.jpg"
   },
@@ -163,7 +163,7 @@
     "discountPercentage": 8.14,
     "rating": 4.59,
     "stock": 61,
-    "brand": "Fog Scent Xpressio",
+    "brand": true,
     "category": "soluble",
     "thumbnail": "/images/nescafe-gold.jpg"
   },
@@ -175,7 +175,7 @@
     "discountPercentage": 15.6,
     "rating": 4.21,
     "stock": 114,
-    "brand": "Al Munakh",
+    "brand": true,
     "category": "soluble",
     "thumbnail": "/images/native.jpg"
   },
@@ -187,7 +187,7 @@
     "discountPercentage": 10.99,
     "rating": 4.7,
     "stock": 105,
-    "brand": "Lord - Al-Rehab",
+    "brand": false,
     "category": "soluble",
     "thumbnail": "/images/expresso.jpg"
   },
@@ -199,7 +199,7 @@
     "discountPercentage": 13.31,
     "rating": 4.83,
     "stock": 110,
-    "brand": "L'Oreal Paris",
+    "brand": true,
     "category": "soluble",
     "thumbnail": "/images/coffee-tata.jpg"
   },
@@ -211,7 +211,7 @@
     "discountPercentage": 4.09,
     "rating": 4.52,
     "stock": 78,
-    "brand": "Hemani Tea",
+    "brand": false,
     "category": "soluble",
     "thumbnail": "/images/mocca-italy.jpg"
   },
@@ -223,7 +223,7 @@
     "discountPercentage": 13.1,
     "rating": 4.56,
     "stock": 88,
-    "brand": "Dermive",
+    "brand": false,
     "category": "soluble",
     "thumbnail": "/images/coffee-mocha.jpg"
   },
@@ -235,7 +235,7 @@
     "discountPercentage": 10.68,
     "rating": 4.42,
     "stock": 54,
-    "brand": "ROREC White Rice",
+    "brand": true,
     "category": "soluble",
     "thumbnail": "/images/lavazza.jpg"
   },
@@ -247,7 +247,7 @@
     "discountPercentage": 16.99,
     "rating": 4.06,
     "stock": 140,
-    "brand": "Fair & Clear",
+    "brand": false,
     "category": "mixed",
     "thumbnail": "/images/photo.jpg"
   },
@@ -259,7 +259,7 @@
     "discountPercentage": 4.81,
     "rating": 4.44,
     "stock": 133,
-    "brand": "Saaf & Khaas",
+    "brand": false,
     "category": "mixed",
     "thumbnail": "/images/photo.jpg"
   },
@@ -271,7 +271,7 @@
     "discountPercentage": 15.58,
     "rating": 4.57,
     "stock": 146,
-    "brand": "Bake Parlor Big",
+    "brand": false,
     "category": "mixed",
     "thumbnail": "/images/photo.jpg"
   },
@@ -283,7 +283,7 @@
     "discountPercentage": 8.04,
     "rating": 4.85,
     "stock": 26,
-    "brand": "Baking Food Items",
+    "brand": false,
     "category": "mixed",
     "thumbnail": "/images/photo.jpg"
   },
@@ -295,7 +295,7 @@
     "discountPercentage": 16.8,
     "rating": 4.94,
     "stock": 113,
-    "brand": "fauji",
+    "brand": false,
     "category": "mixed",
     "thumbnail": "/images/photo.jpg"
   },
@@ -307,7 +307,7 @@
     "discountPercentage": 13.58,
     "rating": 4.87,
     "stock": 47,
-    "brand": "Dry Rose",
+    "brand": false,
     "category": "mixed",
     "thumbnail": "/images/photo.jpg"
   },
@@ -319,7 +319,7 @@
     "discountPercentage": 17.86,
     "rating": 4.08,
     "stock": 131,
-    "brand": "Boho Decor",
+    "brand": false,
     "category": "mixed",
     "thumbnail": "/images/photo.jpg"
   },
@@ -331,7 +331,7 @@
     "discountPercentage": 15.58,
     "rating": 4.41,
     "stock": 17,
-    "brand": "Flying Wooden",
+    "brand": false,
     "category": "mixed",
     "thumbnail": "/images/brew-bros.jpg"
   },
@@ -343,7 +343,7 @@
     "discountPercentage": 16.49,
     "rating": 4.82,
     "stock": 54,
-    "brand": "LED Lights",
+    "brand": false,
     "category": "mixed",
     "thumbnail": "/images/new-york-bros.jpg"
   },
@@ -355,7 +355,7 @@
     "discountPercentage": 15.34,
     "rating": 4.44,
     "stock": 7,
-    "brand": "luxury palace",
+    "brand": false,
     "category": "mixed",
     "thumbnail": "/images/stablishment.jpg"
   }

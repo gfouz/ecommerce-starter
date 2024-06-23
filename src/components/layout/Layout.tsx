@@ -4,6 +4,8 @@ import Navbar from '../../components/navbar/NextNavbar.tsx';
 import BasicFooter from '../../components/footer/BasicFooter.tsx';
 import ProductsInCartQuantity from '../../components/product/ProductsInCartQuantity.tsx';
 
+const links = ['/', '/features', '/customers', '/contact'];
+
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className='bg-white custom-layout'>
@@ -17,7 +19,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <ProductsInCartQuantity />
       </div>
       <div className='w-full'>
-        <Navbar theme='dark' />
+        <Navbar links={links} />
       </div>
       <main className='custom-main'>{children}</main>
 

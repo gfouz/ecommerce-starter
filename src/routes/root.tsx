@@ -1,8 +1,9 @@
 import Layout from '../components/layout/Layout.tsx';
 import Features from '../components/features/Features.tsx';
 import productlist from '../mocks/products.json';
-import { Products } from '../components/product/Products';
 import Category from '../components/category/Category.tsx';
+import SuggestedProducts from '../components/product/SuggestedProducts.tsx';
+import PaymentMethods from '../components/payment/Payment.tsx';
 
 const Root = () => {
   return (
@@ -28,6 +29,8 @@ const Root = () => {
       </article>
       <Features />
       <Category />
+      <SuggestedProducts products={productlist} />
+      <PaymentMethods />
     </Layout>
   );
 };

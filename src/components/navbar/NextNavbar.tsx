@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import {
   Navbar as NextUINavbar,
@@ -11,12 +11,13 @@ import {
   NavbarItem,
 } from '@nextui-org/navbar';
 import { Button } from '@nextui-org/button';
-import { Link } from '@nextui-org/link';
 import CartPlus from '../icons/CartPlus.tsx';
 
-export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+let regex = /\//g;
 
+export default function Navbar({ links }: { links: string[] }) {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  let { pathname } = useLocation();
   const menuItems = [
     'Profile',
     'Dashboard',
@@ -59,29 +60,27 @@ export default function Navbar() {
           <CartPlus color='white' />
           <p className='font-bold text-inherit text-white'>RapidCoffee</p>
         </NavbarBrand>
-        <NavbarItem>
-          <Link className='dark:text-white' href='#'>
-            Features
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link className='dark:text-white' href='#' aria-current='page'>
-            Customers
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link className='dark:text-white' href='#'>
-            Integrations
-          </Link>
-        </NavbarItem>
-      </NavbarContent>
 
+        {links?.map((link) => (
+          <NavbarItem
+            key={link}
+            className={pathname !== link ? 'block' : 'hidden'}
+          >
+            <Link className='dark:text-white text-white' to={link}>
+              <span>
+                {pathname !== link ? link.replace(regex, ' ') : null}{' '}
+              </span>
+              <span>{link === '/' && pathname !== link ? 'home' : null}</span>
+            </Link>
+          </NavbarItem>
+        ))}
+      </NavbarContent>
       <NavbarContent justify='end'>
         <NavbarItem className='hidden lg:flex'>
-          <Link href='#'>Login</Link>
+          <Link to='/login'>Login</Link>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color='warning' href='#' variant='flat'>
+          <Button as={Link} color='primary' to='/register' variant='flat'>
             Sign Up
           </Button>
         </NavbarItem>
@@ -99,8 +98,7 @@ export default function Navbar() {
                     ? 'danger'
                     : 'foreground'
               }
-              href='#'
-              size='lg'
+              to='#'
             >
               {item}
             </Link>

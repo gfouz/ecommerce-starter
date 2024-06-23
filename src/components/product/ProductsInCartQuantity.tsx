@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useCartStore } from '../../store/store.ts';
 import { useState, useEffect } from 'react';
 import CartBadge from '../../components/badge/CartBadge.tsx';
@@ -9,5 +10,9 @@ export default function ProductsInCartQuantity() {
   useEffect(() => {
     setQuantity(productsInCart);
   }, [productsInCart]);
-  return <CartBadge quantity={quantity} />;
+  return (
+    <Link to='/cart'>
+      <CartBadge quantity={quantity} />
+    </Link>
+  );
 }

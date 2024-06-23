@@ -17,7 +17,9 @@ export default function Features() {
             />
             <div>
               <h4 className='font-medium capitalize text-lg'>{feature.name}</h4>
-              <p className='text-gray-500 text-sm'>{feature.description}</p>
+              <p className='text-gray-500 text-sm mb-8'>
+                {feature.description}
+              </p>
               <Modal title={feature.title} info={feature.info} />
             </div>
           </div>

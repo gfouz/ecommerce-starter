@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useCartStore } from '../../store/store.ts';
-import { Product as IProduct } from "../../store/store";
+import { Product as IProduct } from '../../store/store';
 import ProductCard from '../../components/card/Card.tsx';
 import PlusButton from './PlusButton.tsx';
 import MinusButton from './MinusButton.tsx';
@@ -10,7 +10,7 @@ interface ProductProps {
   product: IProduct;
 }
 
-export function Product({ product }: ProductProps) {
+export default function Product({ product }: ProductProps) {
   const cart = useCartStore((state) => state.cart);
   const _product = cart.find((item) => item.id === product.id);
   const dispatch = useCartStore((state) => state.dispatch);

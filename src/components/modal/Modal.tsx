@@ -21,6 +21,7 @@ export default function NextModal({
     <>
       <div className='flex flex-wrap gap-3'>
         <Button
+          size='sm'
           variant='shadow'
           color='secondary'
           onPress={() => onOpen()}

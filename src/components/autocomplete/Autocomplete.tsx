@@ -1,6 +1,5 @@
 import {
   Autocomplete as NextUIAutocomplete,
-  AutocompleteSection,
   AutocompleteItem,
 } from '@nextui-org/autocomplete';
 

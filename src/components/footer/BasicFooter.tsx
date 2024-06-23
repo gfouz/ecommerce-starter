@@ -6,12 +6,12 @@ interface BasicFooterI {
 const BasicFooter = ({ color, background }: BasicFooterI) => {
   return (
     <footer
-      className={`${background} w-full text-black font-semibold  p-6 md:p-2 md:px-8`}
+      className={`${background} w-full text-black font-semibold p-6 md:p-2 md:px-8`}
     >
-      <div className='flex flex-col items-center justify-between mt-6 md:flex-row'>
+      <div className='flex flex-col items-center justify-between  md:flex-row'>
         <div>
           <a href='#' className={`${color} text-xl font-bold`}>
-            RapidCoffee
+            <span className='text-rose-500'>Rapid</span>Coffee
           </a>
         </div>
         <div className='flex mt-4 md:m-0 '>
