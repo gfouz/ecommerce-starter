@@ -15,7 +15,7 @@ export type Action = {
   type: string;
   payload: Product;
 };
-
+export type Dispatch = (action: Action) => void;
 interface ActionTypes {
   ADD_TO_CART: string;
   REMOVE_FROM_CART: string;
@@ -90,8 +90,6 @@ const actions: Actions = {
     //condition in case there is no item into cart.
     const cart = [...state.cart, { ...action.payload, quantity: 1 }];
     const newState = { ...state, cart };
-
-    updateLocalStorage(newState);
     return newState;
   },
 
@@ -104,7 +102,7 @@ const actions: Actions = {
 
     return newState;
   },
-  [ACTION_TYPES.EMPTY_CART]: (state: CartStore, action: Action) => {
+  [ACTION_TYPES.EMPTY_CART]: (state: CartStore) => {
     const newState = {
       ...state,
       cart: [],

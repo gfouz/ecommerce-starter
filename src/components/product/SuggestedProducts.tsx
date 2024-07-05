@@ -7,7 +7,7 @@ export default function SuggestedProducts({
 }: ProductProps) {
   const list = products.filter((item) => item.brand === true);
   return (
-    <section className='w-full px-4 pb-20'>
+    <section className='w-full px-4 py-16 pb-20'>
       <h2 className='text-3xl my-6'>Suggested for you</h2>
       <ul className='responsive-columns'>
         {list.slice(0, limit).map((product) => {

@@ -1,6 +1,5 @@
 import { Textarea as NextUITextarea } from '@nextui-org/input';
-import { FieldErrors, UseFormRegister } from 'react-hook-form';
-import { Post, InputProps } from '../../schemas/post.schema';
+import { InputProps } from '../../schemas/post.schema';
 
 export default function Textarea({
   color,

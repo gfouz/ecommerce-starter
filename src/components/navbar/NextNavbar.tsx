@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { menuItems } from './constant.ts';
 
 import {
   Navbar as NextUINavbar,
@@ -11,25 +12,13 @@ import {
   NavbarItem,
 } from '@nextui-org/navbar';
 import { Button } from '@nextui-org/button';
-import CartPlus from '../icons/CartPlus.tsx';
+import { CoffeeIcon} from '../icons/icons.tsx';
 
 let regex = /\//g;
 
 export default function Navbar({ links }: { links: string[] }) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   let { pathname } = useLocation();
-  const menuItems = [
-    'Profile',
-    'Dashboard',
-    'Activity',
-    'Analytics',
-    'System',
-    'Deployments',
-    'My Settings',
-    'Team Settings',
-    'Help & Feedback',
-    'Log Out',
-  ];
 
   return (
     <NextUINavbar
@@ -50,14 +39,14 @@ export default function Navbar({ links }: { links: string[] }) {
         justify='center'
       >
         <NavbarBrand>
-          <CartPlus color='white' />
+          <CoffeeIcon />
           <p className='font-extrabold text-inherit'>RapidCoffee</p>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className='hidden sm:flex gap-4 ' justify='center'>
         <NavbarBrand className='bg-rose-500 h-full px-4'>
-          <CartPlus color='white' />
+          <CoffeeIcon />
           <p className='font-bold text-inherit text-white'>RapidCoffee</p>
         </NavbarBrand>
 
@@ -66,7 +55,10 @@ export default function Navbar({ links }: { links: string[] }) {
             key={link}
             className={pathname !== link ? 'block' : 'hidden'}
           >
-            <Link className='dark:text-white text-white' to={link}>
+            <Link
+              className='dark:text-white text-white hover:text-blue-400'
+              to={link}
+            >
               <span>
                 {pathname !== link ? link.replace(regex, ' ') : null}{' '}
               </span>
@@ -76,31 +68,27 @@ export default function Navbar({ links }: { links: string[] }) {
         ))}
       </NavbarContent>
       <NavbarContent justify='end'>
-        <NavbarItem className='hidden lg:flex'>
-          <Link to='/login'>Login</Link>
-        </NavbarItem>
         <NavbarItem>
           <Button as={Link} color='primary' to='/register' variant='flat'>
-            Sign Up
+            Log Out
           </Button>
         </NavbarItem>
       </NavbarContent>
 
       <NavbarMenu className='pt-16'>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+        {links.map((link, index) => (
+          <NavbarMenuItem
+            key={index}
+            className={pathname !== link ? 'block' : 'hidden'}
+          >
             <Link
-              className='w-full'
-              color={
-                index === 2
-                  ? 'warning'
-                  : index === menuItems.length - 1
-                    ? 'danger'
-                    : 'foreground'
-              }
-              to='#'
+              className='text-slate-900 capitalize font-medium hover:tracking-wider hover:font-extrabold hover:text-slate-600'
+              to={link}
             >
-              {item}
+              <span className=''>
+                {pathname !== link ? link.replace(regex, ' ') : null}{' '}
+              </span>
+              <span>{link === '/' && pathname !== link ? 'home' : null}</span>
             </Link>
           </NavbarMenuItem>
         ))}

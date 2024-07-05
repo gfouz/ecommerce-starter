@@ -15,7 +15,7 @@ function Cart() {
             : 'block'
         }
       >
-        {cart.length === 0 ? <NotFound /> : null}
+        {cart.length === 0 || cart == undefined ? <NotFound /> : null}
         {cart?.map((product) => <Product product={product} key={product.id} />)}
       </ul>
     </Layout>

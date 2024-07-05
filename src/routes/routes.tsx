@@ -2,8 +2,11 @@ import { lazy } from 'react';
 const Cart = lazy(() => import('../routes/cart.tsx'));
 const Root = lazy(() => import('./root'));
 const Products = lazy(() => import('../routes/products.tsx'));
-const RegisterPage = lazy(() => import('./users/register'));
+const RegisterPage = lazy(() => import('./users/register.tsx'));
+const LoginPage = lazy(() => import('./users/login.tsx'));
 const ErrorPage = lazy(() => import('../routes/error-page.tsx'));
+const OrderReview = lazy(() => import('../routes/order-review.tsx'));
+const PrivacyPolicy = lazy(() => import('../routes/privacy-policy.tsx'));
 
 export const list = [
   {
@@ -17,6 +20,16 @@ export const list = [
     errorElement: <ErrorPage />,
   },
   {
+    path: '/order/review',
+    element: <OrderReview />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: '/privacy/policy',
+    element: <PrivacyPolicy />,
+    errorElement: <ErrorPage />,
+  },
+  {
     path: '/products',
     element: <Products />,
     errorElement: <ErrorPage />,
@@ -24,6 +37,11 @@ export const list = [
   {
     path: '/register',
     element: <RegisterPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: '/login',
+    element: <LoginPage />,
     errorElement: <ErrorPage />,
   },
 ];

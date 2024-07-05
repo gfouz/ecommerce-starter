@@ -4,11 +4,11 @@ import Navbar from '../../components/navbar/NextNavbar.tsx';
 import BasicFooter from '../../components/footer/BasicFooter.tsx';
 import ProductsInCartQuantity from '../../components/product/ProductsInCartQuantity.tsx';
 
-const links = ['/', '/features', '/customers', '/contact'];
+const links = ['/', '/order/review', '/login', '/register', 'features'];
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className='bg-white custom-layout'>
+    <div className='bg-white'>
       <div className='flex justify-between sticky bg-white bg-opacity-80 z-30 top-0 left-0 items-center p-2 md:px-8'>
         <section className='flex items-center'>
           <h2 className='font-extrabold tracking-tight mx-2'>
