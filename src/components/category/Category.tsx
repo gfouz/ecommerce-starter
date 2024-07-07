@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom';
 const categories = [
   {
     name: 'Ground Coffee',
-    image: 'images/category-1.jpg',
+    image: 'images/alls.jpg',
     category: 'ground',
   },
   {
     name: 'Soluble Coffee',
-    image: 'images/category-2.jpg',
+    image: 'images/alls.jpg',
     category: 'soluble',
   },
   {
     name: 'Mixed Coffee',
-    image: 'images/category-3.jpg',
+    image: 'images/alls.jpg',
     category: 'mixed',
   },
 ];
@@ -30,8 +30,8 @@ export default function Category() {
             state={{ fromCategory: { category: item.category } }}
           >
             <div className='relative cursor-pointer'>
-              <section className='absolute top-0 left-0 w-full h-full flex p-4 items-center'>
-                <h2 className='font-bold tracking-tight text-slate-800 text-[140%] mt-24'>
+              <section className='absolute p-4 top-0 left-0 w-full h-full flex p-4 justify-center'>
+                <h2 className='font-bold tracking-tight text-emerald-200 text-[140%]'>
                   {item.name}
                 </h2>
               </section>

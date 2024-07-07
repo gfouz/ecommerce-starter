@@ -15,17 +15,17 @@ const Root = () => {
             <div className='flex-1 py-20'>
               <section>
                 <h1 className='text-[7vw] mb-[-12px] text-rose-500 font-extrabold tracking-tight'>
-                  Rapid<span className='text-slate-700'>Coffee</span>
+                  Rapid<span className='text-violet-400'>Coffee</span>
                 </h1>
-                <h2 className='text-slate-700 font-extrabold text-[3vw]'>
+                <h2 className='text-violet-400 font-extrabold text-[3vw]'>
                   Taste this flavour forever
                 </h2>
-                <p className='text-[2vw]'>100% fresh and high quality coffee</p>
+                <p className='text-[2vw] text-white'>100% fresh and high quality coffee</p>
               </section>
             </div>
           </div>
         </section>
-        <img src='images/coffee-bg.jpg' />
+        <img src='images/coffee-main.jpg' />
       </article>
       <Features />
       <Category />
