@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import MotionDropdown from '../category/DropdownNavbar.tsx';
-import Dropdown from '../dropdown/Dropdown.tsx';
 
 import {
   Navbar as NextUINavbar,
@@ -12,17 +10,18 @@ import {
   NavbarContent,
   NavbarItem,
 } from '@nextui-org/navbar';
+import { Button } from '@nextui-org/button';
+import { CoffeeIcon } from '../icons/icons.tsx';
 
 let regex = /\//g;
-const defaultLinks = ['/', '/about', '/blog', '/contact'];
 
-export default function Navbar({ links = defaultLinks }: { links: string[] }) {
+export default function Navbar({ links }: { links: string[] }) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   let { pathname } = useLocation();
 
   return (
     <NextUINavbar
-      className='bg-slate-800 opacity-90'
+      className='bg-slate-800'
       isBordered
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
@@ -39,42 +38,43 @@ export default function Navbar({ links = defaultLinks }: { links: string[] }) {
         justify='center'
       >
         <NavbarBrand>
-          <Dropdown />
+          <CoffeeIcon />
+          <p className='font-extrabold text-inherit'>RapidCoffee</p>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className='hidden sm:flex gap-4 ' justify='center'>
-        <NavbarBrand className='bg-rose-500 h-full relative'>
-          <MotionDropdown />
+        <NavbarBrand className='bg-rose-500 h-full px-4'>
+          <CoffeeIcon />
+          <p className='font-bold text-inherit text-white'>RapidCoffee</p>
         </NavbarBrand>
 
         {links?.map((link) => (
-          <NavbarItem key={link}>
+          <NavbarItem
+            key={link}
+            className={pathname !== link ? 'block' : 'hidden'}
+          >
             <Link
-              className={
-                pathname !== link
-                  ? 'capitalize text-white'
-                  : 'capitalize font-black text-yellow-300'
-              }
+              className='dark:text-white text-white hover:text-blue-400'
               to={link}
             >
-              <span>{link ? link.replace(regex, ' ') : null} </span>
-              <span>{link === '/' ? 'home' : null}</span>
+              <span>
+                {pathname !== link ? link.replace(regex, ' ') : null}{' '}
+              </span>
+              <span>{link === '/' && pathname !== link ? 'home' : null}</span>
             </Link>
           </NavbarItem>
         ))}
       </NavbarContent>
+      <NavbarContent justify='end'>
+        <NavbarItem>
+          <Button as={Link} color='primary' to='/register' variant='flat'>
+            Log Out
+          </Button>
+        </NavbarItem>
+      </NavbarContent>
 
       <NavbarMenu className='pt-16'>
-        <div className='flex pb-4 border-b border-gray-700'>
-          <img
-            className='w-[25px] h-auto'
-            src='/images/www.png'
-            alt='my logo'
-          />
-          <span className='ml-2 font-black'>Fouz Portfolio</span>
-        </div>
-
         {links.map((link, index) => (
           <NavbarMenuItem
             key={index}

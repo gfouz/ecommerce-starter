@@ -1,25 +1,27 @@
 import CommentsForm from '../../components/form/CommentsForm.tsx';
 
 interface IFooter {
-  color?: string;
-  background?: string;
+  styles?: string;
 }
 
 export default function Footer(props: IFooter) {
-  const { color, background } = props;
+  const { styles } = props;
   return (
     <footer
-      className={`${color} flex justify-center px-4 w-[100%] ${background}`}
+      className={`dark:bg-gray-900 dark:text-gray-100 flex justify-center px-4 w-[100%] text-amber-200 bg-stone-950 ${styles}`}
     >
       <div className='container px-4 py-8'>
         <div className='flex justify-center py-6'>
-          <CommentsForm color={color} background={background} />
+          <CommentsForm styles={styles} />
         </div>
         <hr className='h-px mt-6 bg-gray-700 border-none' />
 
-        <div className='text-[#FEF08A] flex flex-col items-center justify-between mt-6 md:flex-row'>
+        <div className='flex flex-col items-center justify-between mt-6 md:flex-row'>
           <div>
-            <a href='#' className={`${color} px-4 text-sm`}>
+            <a
+              href='https://github.com/gfouz'
+              className={`${styles} capitalize px-4 text-sm`}
+            >
               fouz.dev
             </a>
           </div>
@@ -27,20 +29,20 @@ export default function Footer(props: IFooter) {
             <div className='mx-4'>
               <a
                 href='https://github.com/gfouz'
-                className={`${color} px-4 text-sm`}
+                className={`${styles} px-4 text-sm`}
               >
                 Github
               </a>
-              <a href='/blog-dashboard' className={`${color} px-4 text-sm`}>
+              <a href='/blog-dashboard' className={`px-4 text-sm ${styles}`}>
                 Blog
               </a>
               <a
                 href='https://dev.to/gfouz'
-                className={`${color} px-4 text-sm`}
+                className={`${styles} px-4 text-sm`}
               >
                 DevCommunity
               </a>
-              <a href='#' className={`${color} px-4 text-sm`}>
+              <a href='#' className={`${styles} px-4 text-sm`}>
                 Contact
               </a>
             </div>

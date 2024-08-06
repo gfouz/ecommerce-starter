@@ -1,10 +1,17 @@
 import React from 'react';
 import SearchInput from '../../components/input/SearchInput.tsx';
 import Navbar from '../../components/navbar/NextNavbar.tsx';
-import BasicFooter from '../../components/footer/BasicFooter.tsx';
+import Footer from '../../components/footer/Footer.tsx';
 import ProductsInCartQuantity from '../../components/product/ProductsInCartQuantity.tsx';
 
-const links = ['/', '/order/review', '/login', '/register', 'features'];
+const links = [
+  '/',
+  '/order/review',
+  '/login',
+  '/register',
+  '/features',
+  '/checkout',
+];
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -21,9 +28,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <div className='w-full'>
         <Navbar links={links} />
       </div>
-      <main className='custom-main'>{children}</main>
+      <main className='ecommerce-main-layout'>{children}</main>
 
-      <BasicFooter background='almost-white' />
+      <Footer />
     </div>
   );
 };

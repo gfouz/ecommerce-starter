@@ -1,16 +1,16 @@
+import React from 'react';
 import { Spacer } from '@nextui-org/spacer';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { RegisterSchema, Auth } from '../../schemas/auth.schema.ts';
-import { registerService } from '../../services/registerService';
-import { useAuthMutation } from '../../hooks/useAuthMutation.tsx';
+import { RegisterSchema, Register } from '../../schemas/auth.schema.ts';
 
 import SubmitButton from '../../components/buttons/SubmitButton.tsx';
 import LoginButton from '../../components/buttons/LoginButton.tsx';
 
-import Input from '../../components/input/Input.tsx';
-import PasswordInput from '../../components/input/PasswordInput.tsx';
-import ConfirmPassword from '../../components/input/ConfirmPassword.tsx';
+import { Input } from '@nextui-org/input';
+import PasswordInput from './PasswordInput.tsx';
+import ConfirmPassword from './ConfirmPassword.tsx';
+import { useUserStore } from '../../store/userstore.ts';
 
 export interface FormInput {
   username: string;
@@ -24,68 +24,89 @@ export default function MaterialDesignSignUp() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<Auth>({
+  } = useForm<Register>({
     resolver: zodResolver(RegisterSchema),
   });
 
-  const { mutation } = useAuthMutation(registerService);
+  const dispatch = useUserStore((state) => state.dispatch);
+  const user = useUserStore((state) => state.user);
+  const [registered, setRegistered] = React.useState(false);
+  React.useEffect(() => {
+    user.registered === true ? setRegistered(true) : setRegistered(false);
+  }, [user]);
 
-  const onSubmit: SubmitHandler<Auth> = async (data) => {
-    mutation.mutateAsync(data);
-    console.log(data);
+  const onSubmit: SubmitHandler<Register> = (_user) => {
+    dispatch({
+      type: 'SET_USER',
+      payload: { ..._user, logged: false, registered: true },
+    });
   };
   return (
-    <div className='dark min-h-screen flex flex-col items-center justify-center bg-cyan-900'>
-      <div className='bg-cyan-950 p-8 py-16 rounded-3xl shadow-lg w-full max-w-md '>
-        <h2 className='text-slate-500 text-3xl font-extrabold tracking-tight mb-6 text-center'>
+    <div className='dark py-20 flex flex-col items-center justify-center brown-bg'>
+      <div className='bg-transparent p-8 py-16 rounded-3xl shadow shadow-amber-100 shadow-lg w-full max-w-md'>
+        <h2 className='text-amber-200 text-3xl font-extrabold tracking-tight mb-6 text-center'>
           Sign Up
         </h2>
         <form className='mt-6' onSubmit={handleSubmit(onSubmit)}>
           <div className='my-18'>
             <Input
               color='warning'
-              label='username'
-              errors={errors}
-              register={register}
-              placeholder='Enter your Username'
+              label='Full Name'
+              variant='underlined'
+              labelPlacement='outside'
+              placeholder='Write your Full Name'
+              {...register('fullname')}
+              classNames={{ label: '!text-white', input: 'text-white' }}
+              isInvalid={errors?.fullname?.message ? true : false}
+              errorMessage={`${errors.fullname?.message}`}
+            />
+            <Spacer y={8} />
+            <Input
+              type='email'
+              color='warning'
+              label='Your Email'
+              variant='underlined'
+              labelPlacement='outside'
+              placeholder='Write your Email'
+              {...register('email')}
+              classNames={{ label: '!text-white', input: 'text-white' }}
+              isInvalid={errors?.email?.message ? true : false}
+              errorMessage={`${errors.email?.message}`}
             />
             <Spacer y={8} />
             <Input
               color='warning'
-              type='email'
-              label='email'
-              errors={errors}
-              register={register}
-              placeholder='Enter your Email'
+              label='Address'
+              variant='underlined'
+              labelPlacement='outside'
+              placeholder='Write your Address'
+              {...register('address')}
+              classNames={{ label: '!text-white', input: 'text-white' }}
+              isInvalid={errors?.address?.message ? true : false}
+              errorMessage={`${errors.address?.message}`}
             />
             <Spacer y={8} />
-            <PasswordInput
-              color='warning'
-              label='password'
-              errors={errors}
-              register={register}
-            />
+            <PasswordInput errors={errors} register={register} />
             <Spacer y={8} />
-            <ConfirmPassword
-              color='warning'
-              label='confirmPassword'
-              register={register}
-              errors={errors}
-            />
+            <ConfirmPassword register={register} errors={errors} />
             <Spacer y={8} />
-            {mutation?.status === 'success' ? (
-              <LoginButton />
-            ) : (
-              <SubmitButton />
-            )}
+            {registered === true ? <LoginButton /> : <SubmitButton />}
           </div>
+          {registered === true ? (
+            <p className='text-white text-xs tracking-tight font-extrabold my-4'>
+              you are already Signed Up
+            </p>
+          ) : null}
         </form>
-        {mutation.failureReason ? (
-          <p className='text-rose-500 tracking-tight font-extrabold text-xs mt-1'>{`${mutation.failureReason}`}</p>
-        ) : null}
       </div>
     </div>
   );
 }
 
-//#1e293b slate-800
+/*
+ {mutation.failureReason ? (
+  <p className='text-rose-500 tracking-tight font-extrabold text-xs mt-1'>{`${mutation.failureReason}`}</p>
+  ) : null
+  }
+  
+*/

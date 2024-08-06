@@ -3,9 +3,11 @@ import { persist, createJSONStorage } from 'zustand/middleware';
 
 export interface Product {
   id: number;
-  quantity?: number;
+  quantity: number;
   title: string;
   price: number;
+  category: string;
+  brand: boolean;
 }
 export interface CartStore {
   cart: Product[];

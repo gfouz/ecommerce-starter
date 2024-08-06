@@ -10,8 +10,12 @@ const reducer = (state: UserStore, action: UserAction) => {
 };
 
 export const initialState = {
-  user_id: undefined,
-  token: undefined,
+  fullname: undefined,
+  email: undefined,
+  address: undefined,
+  password: undefined,
+  logged: false,
+  registered: false,
 };
 //Redux-like patterns store
 const userState = persist<UserStore>(
@@ -25,3 +29,15 @@ const userState = persist<UserStore>(
   },
 );
 export const useUserStore = create(userState);
+
+/*example of how to consume the store
+
+import {useUserStore} from 'store'
+
+const user = useUserStore( state => state.user )
+
+const dispatch = useUserStore((state) => state.dispatch)
+
+-------how to use dispatch---------
+dispatch({type:'SET_USER', payload: user}) 
+*/

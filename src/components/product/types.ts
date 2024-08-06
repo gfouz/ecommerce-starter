@@ -29,5 +29,5 @@ export interface IProduct {
 
 export interface ProductProps {
   limit?: number;
-  products: IProduct[];
+  products: Product[];
 }

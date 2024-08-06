@@ -1,22 +1,6 @@
 import { Link } from 'react-router-dom';
+import { categories } from './constants.ts'
 
-const categories = [
-  {
-    name: 'Ground Coffee',
-    image: 'images/alls.jpg',
-    category: 'ground',
-  },
-  {
-    name: 'Soluble Coffee',
-    image: 'images/alls.jpg',
-    category: 'soluble',
-  },
-  {
-    name: 'Mixed Coffee',
-    image: 'images/alls.jpg',
-    category: 'mixed',
-  },
-];
 
 export default function Category() {
   return (
@@ -27,7 +11,7 @@ export default function Category() {
           <Link
             key={index}
             to='/products'
-            state={{ fromCategory: { category: item.category } }}
+            state={{ category: item.category }}
           >
             <div className='relative cursor-pointer'>
               <section className='absolute p-4 top-0 left-0 w-full h-full flex p-4 justify-center'>

@@ -4,9 +4,10 @@ import Product from './Product.tsx';
 
 export default function Products({ products, limit = 10 }: ProductProps) {
   const location = useLocation();
-  const { fromCategory } = location.state;
+  const { category } = location.state;
+  
   const list = products.filter(
-    (item) => item.category === fromCategory.category,
+    (item) => item.category === category,
   );
   return (
     <ul className='responsive-columns justify-center'>

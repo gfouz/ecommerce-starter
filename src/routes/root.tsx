@@ -20,7 +20,9 @@ const Root = () => {
                 <h2 className='text-violet-400 font-extrabold text-[3vw]'>
                   Taste this flavour forever
                 </h2>
-                <p className='text-[2vw] text-white'>100% fresh and high quality coffee</p>
+                <p className='text-[2vw] text-white'>
+                  100% fresh and high quality coffee
+                </p>
               </section>
             </div>
           </div>

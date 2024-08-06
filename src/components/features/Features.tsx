@@ -1,10 +1,14 @@
 import { features } from './features-data.ts';
 import Modal from '../modal/Modal.tsx';
 
-export default function Features() {
+export default function Features({
+  styles = 'responsive-columns',
+}: {
+  styles?: string;
+}) {
   return (
     <div className='py-16 px-4'>
-      <div className='responsive-columns'>
+      <div className={styles}>
         {features.map((feature, index) => (
           <div
             key={index}

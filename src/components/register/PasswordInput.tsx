@@ -1,25 +1,26 @@
 import React from 'react';
 import { Input } from '@nextui-org/input';
 import EyeButton from '../buttons/EyeButton';
-import { InputProps } from '../../schemas/auth.schema.ts';
+import { PasswordInputRegisterProps } from '../../schemas/auth.schema.ts';
 
-const PasswordInput = (props: InputProps) => {
-  const { color, errors, register } = props;
+const PasswordInput = (props: PasswordInputRegisterProps) => {
+  const { errors, register } = props;
   const [type, setType] = React.useState('password');
 
   return (
     <Input
       type={type}
-      color={color}
+      color='warning'
       label='Password'
       variant='underlined'
+      className='customed-input'
       labelPlacement='outside'
       {...register('password')}
       placeholder='Enter your Password'
-      classNames={{ label: 'dark:!text-white' }}
+      classNames={{ label: 'dark:!text-white !text-white' }}
       isInvalid={errors?.password?.message ? true : false}
       errorMessage={`${errors?.password?.message}`}
-      endContent={<EyeButton color={color} type={type} setType={setType} />}
+      endContent={<EyeButton color='warning' type={type} setType={setType} />}
     />
   );
 };

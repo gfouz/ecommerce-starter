@@ -9,7 +9,8 @@
     "stock": 54,
     "brand": false,
     "category": "ground",
-    "thumbnail": "/images/biga.jpg"
+    "thumbnail": "/images/biga.jpg",
+    "quantity": 0
   },
   {
     "id": 6,
@@ -21,7 +22,8 @@
     "stock": 83,
     "brand": false,
     "category": "ground",
-    "thumbnail": "/images/buns.jpg"
+    "thumbnail": "/images/buns.jpg",
+    "quantity": 0
   },
   {
     "id": 2,
@@ -33,7 +35,8 @@
     "stock": 34,
     "brand": false,
     "category": "ground",
-    "thumbnail": "/images/blue-max.jpg"
+    "thumbnail": "/images/blue-max.jpg",
+    "quantity": 0
   },
   {
     "id": 3,
@@ -45,7 +48,8 @@
     "stock": 36,
     "brand": false,
     "category": "ground",
-    "thumbnail": "/images/maxi.jpg"
+    "thumbnail": "/images/maxi.jpg",
+    "quantity": 0
   },
   {
     "id": 4,
@@ -57,7 +61,8 @@
     "stock": 123,
     "brand": false,
     "category": "ground",
-    "thumbnail": "/images/dellavie-special.jpg"
+    "thumbnail": "/images/dellavie-special.jpg",
+    "quantity": 0
   },
   {
     "id": 5,
@@ -69,7 +74,8 @@
     "stock": 32,
     "brand": false,
     "category": "ground",
-    "thumbnail": "/images/dellavie-original.jpg"
+    "thumbnail": "/images/dellavie-original.jpg",
+    "quantity": 0
   },
   {
     "id": 7,
@@ -81,7 +87,8 @@
     "stock": 50,
     "brand": false,
     "category": "ground",
-    "thumbnail": "/images/dellavie-exclusive.jpg"
+    "thumbnail": "/images/dellavie-exclusive.jpg",
+    "quantity": 0
   },
   {
     "id": 1,
@@ -93,7 +100,8 @@
     "stock": 94,
     "brand": false,
     "category": "ground",
-    "thumbnail": "/images/mockup.jpg"
+    "thumbnail": "/images/mockup.jpg",
+    "quantity": 0
   },
   {
     "id": 8,
@@ -105,7 +113,8 @@
     "stock": 68,
     "brand": false,
     "category": "ground",
-    "thumbnail": "/images/strong-john.jpg"
+    "thumbnail": "/images/strong-john.jpg",
+    "quantity": 0
   },
   {
     "id": 9,
@@ -117,7 +126,8 @@
     "stock": 96,
     "brand": false,
     "category": "ground",
-    "thumbnail": "/images/toucans.jpg"
+    "thumbnail": "/images/toucans.jpg",
+    "quantity": 0
   },
   {
     "id": 10,
@@ -129,7 +139,8 @@
     "stock": 89,
     "brand": false,
     "category": "soluble",
-    "thumbnail": "/images/moccona.jpg"
+    "thumbnail": "/images/moccona.jpg",
+    "quantity": 0
   },
   {
     "id": 11,
@@ -141,7 +152,8 @@
     "stock": 65,
     "brand": false,
     "category": "soluble",
-    "thumbnail": "/images/mellita.jpg"
+    "thumbnail": "/images/mellita.jpg",
+    "quantity": 0
   },
   {
     "id": 12,
@@ -153,7 +165,8 @@
     "stock": 52,
     "brand": false,
     "category": "soluble",
-    "thumbnail": "/images/jacobs.jpg"
+    "thumbnail": "/images/jacobs.jpg",
+    "quantity": 0
   },
   {
     "id": 13,
@@ -165,7 +178,8 @@
     "stock": 61,
     "brand": true,
     "category": "soluble",
-    "thumbnail": "/images/nescafe-gold.jpg"
+    "thumbnail": "/images/nescafe-gold.jpg",
+    "quantity": 0
   },
   {
     "id": 14,
@@ -177,7 +191,8 @@
     "stock": 114,
     "brand": true,
     "category": "soluble",
-    "thumbnail": "/images/native.jpg"
+    "thumbnail": "/images/native.jpg",
+    "quantity": 0
   },
   {
     "id": 15,
@@ -189,7 +204,8 @@
     "stock": 105,
     "brand": false,
     "category": "soluble",
-    "thumbnail": "/images/expresso.jpg"
+    "thumbnail": "/images/expresso.jpg",
+    "quantity": 0
   },
   {
     "id": 16,
@@ -201,7 +217,8 @@
     "stock": 110,
     "brand": true,
     "category": "soluble",
-    "thumbnail": "/images/coffee-tata.jpg"
+    "thumbnail": "/images/coffee-tata.jpg",
+    "quantity": 0
   },
   {
     "id": 17,
@@ -213,7 +230,8 @@
     "stock": 78,
     "brand": false,
     "category": "soluble",
-    "thumbnail": "/images/mocca-italy.jpg"
+    "thumbnail": "/images/mocca-italy.jpg",
+    "quantity": 0
   },
   {
     "id": 18,
@@ -225,7 +243,8 @@
     "stock": 88,
     "brand": false,
     "category": "soluble",
-    "thumbnail": "/images/coffee-mocha.jpg"
+    "thumbnail": "/images/coffee-mocha.jpg",
+    "quantity": 0
   },
   {
     "id": 19,
@@ -237,7 +256,8 @@
     "stock": 54,
     "brand": true,
     "category": "soluble",
-    "thumbnail": "/images/lavazza.jpg"
+    "thumbnail": "/images/lavazza.jpg",
+    "quantity": 0
   },
   {
     "id": 20,
@@ -249,7 +269,8 @@
     "stock": 140,
     "brand": false,
     "category": "mixed",
-    "thumbnail": "/images/photo.jpg"
+    "thumbnail": "/images/photo.jpg",
+    "quantity": 0
   },
   {
     "id": 21,
@@ -261,7 +282,8 @@
     "stock": 133,
     "brand": false,
     "category": "mixed",
-    "thumbnail": "/images/photo.jpg"
+    "thumbnail": "/images/photo.jpg",
+    "quantity": 0
   },
   {
     "id": 22,
@@ -273,7 +295,8 @@
     "stock": 146,
     "brand": false,
     "category": "mixed",
-    "thumbnail": "/images/photo.jpg"
+    "thumbnail": "/images/photo.jpg",
+    "quantity": 0
   },
   {
     "id": 23,
@@ -285,7 +308,8 @@
     "stock": 26,
     "brand": false,
     "category": "mixed",
-    "thumbnail": "/images/photo.jpg"
+    "thumbnail": "/images/photo.jpg",
+    "quantity": 0
   },
   {
     "id": 24,
@@ -297,7 +321,8 @@
     "stock": 113,
     "brand": false,
     "category": "mixed",
-    "thumbnail": "/images/photo.jpg"
+    "thumbnail": "/images/photo.jpg",
+    "quantity": 0
   },
   {
     "id": 25,
@@ -309,7 +334,8 @@
     "stock": 47,
     "brand": false,
     "category": "mixed",
-    "thumbnail": "/images/photo.jpg"
+    "thumbnail": "/images/photo.jpg",
+    "quantity": 0
   },
   {
     "id": 26,
@@ -321,7 +347,8 @@
     "stock": 131,
     "brand": false,
     "category": "mixed",
-    "thumbnail": "/images/photo.jpg"
+    "thumbnail": "/images/photo.jpg",
+    "quantity": 0
   },
   {
     "id": 27,
@@ -333,7 +360,8 @@
     "stock": 17,
     "brand": false,
     "category": "mixed",
-    "thumbnail": "/images/brew-bros.jpg"
+    "thumbnail": "/images/brew-bros.jpg",
+    "quantity": 0
   },
   {
     "id": 28,
@@ -345,7 +373,8 @@
     "stock": 54,
     "brand": false,
     "category": "mixed",
-    "thumbnail": "/images/new-york-bros.jpg"
+    "thumbnail": "/images/new-york-bros.jpg",
+    "quantity": 0
   },
   {
     "id": 29,
@@ -357,6 +386,7 @@
     "stock": 7,
     "brand": false,
     "category": "mixed",
-    "thumbnail": "/images/stablishment.jpg"
+    "thumbnail": "/images/stablishment.jpg",
+    "quantity": 0
   }
 ]

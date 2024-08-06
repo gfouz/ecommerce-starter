@@ -89,3 +89,5 @@ Distributed under the MIT License. See LICENSE for more information.
 Feel free to reach out if you have any questions or need further assistance!
 
 Happy coding!
+
+npm i date-fns

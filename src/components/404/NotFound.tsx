@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import Payment from '../payment/Payment.tsx';
 
 export default function NotFound() {
   return (
